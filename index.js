@@ -42,17 +42,17 @@ const quizLogic=(questions)=>{
   
   let points=0;
   for(const qabundle of questions){
-	let result = false;
-  const answer=readLineSync.question(ask(qabundle.question, qabundle.options));
-  result=checker(answer, qabundle.correctAnswer);
-  if(result){
-	  console.log(`You're right!\n`)
-    points++;
+	  let result = false;
+    const answer=readLineSync.question(ask(qabundle.question, qabundle.options));
+    result=checker(answer, qabundle.correctAnswer);
+    if(result){
+	    console.log(`You're right!\n`)
+      points++;
     } else {
-		console.log(`Sorry, you're wrong this time :(\n`)
+	console.log(`Sorry, you're wrong this time :(\n`)
 	}
   }
-  readLineSync.question(`Score = ${points}. \nThank you for taking the quiz.\nPress any key to end.`);
+    readLineSync.question(`Score = ${points}. \nThank you for taking the quiz.\nPress any key to end.`);
 }
 
 quizLogic(questions)
