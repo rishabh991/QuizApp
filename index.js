@@ -32,9 +32,9 @@ const questions=[
 
 const checker=(input, correct) => input === correct;
 
-const ask = (ques, options) => {
-	console.log(`\n${ques}`);
-	Object.keys(options).forEach(option=>console.log(`${option}: ${options[option]}`));
+const ask = (ques, options)=>{
+  console.log(`\n${ques}`);
+  Object.keys(options).forEach(option=>console.log(`${option}: ${options[option]}`));
 }
 
 const quizLogic=(questions)=>{
@@ -43,11 +43,11 @@ const quizLogic=(questions)=>{
   let points=0;
   for(const qabundle of questions){
 	let result = false;
-    const answer=readLineSync.question(ask(qabundle.question, qabundle.options));
-    result=checker(answer, qabundle.correctAnswer);
-    if(result){
+  const answer=readLineSync.question(ask(qabundle.question, qabundle.options));
+  result=checker(answer, qabundle.correctAnswer);
+  if(result){
 	  console.log(`You're right!\n`)
-      points++;
+    points++;
     } else {
 		console.log(`Sorry, you're wrong this time :(\n`)
 	}
