@@ -44,10 +44,10 @@ const quizLogic=(questions)=>{
   for(const qabundle of questions){
 	let result = false;
 	const answer=readLineSync.question(ask(qabundle.question, qabundle.options));
-    result=checker(answer, qabundle.correctAnswer);
-    if(result){
-	  console.log(`You're right!\n`)
-      points++;
+	result=checker(answer, qabundle.correctAnswer);
+	if(result){
+		console.log(`You're right!\n`)
+		points++;
     } else {
 		console.log(`Sorry, you're wrong this time :(\n`)
 	}
