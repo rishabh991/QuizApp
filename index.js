@@ -38,7 +38,7 @@ const ask = (ques, options)=>{
 }
 
 const quizLogic=(questions)=>{
-  readLineSync.question(`Press any key to begin.`);
+  readLineSync.question(`Press enter to begin.`);
   
   let points=0;
   for(const qabundle of questions){
@@ -52,7 +52,7 @@ const quizLogic=(questions)=>{
 		console.log(`Sorry, you're wrong this time :(\n`)
 	}
   }
-    readLineSync.question(`Score = ${points}. \nThank you for taking the quiz.\nPress any key to end.`);
+    readLineSync.question(`Score = ${points}. \nThank you for taking the quiz.\nPress enter to end.`);
 }
 
 quizLogic(questions)
