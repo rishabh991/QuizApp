@@ -41,10 +41,9 @@ const quizLogic=(questions)=>{
   readLineSync.question(`Press enter to begin.`);
   
   let points=0;
-  for(const qabundle of questions){
-	let result = false;
-	const answer=readLineSync.question(ask(qabundle.question, qabundle.options));
-	result=checker(answer, qabundle.correctAnswer);
+  for(const ques of questions){
+	const answer=readLineSync.question(ask(ques.question, ques.options));
+	result=checker(answer, ques.correctAnswer);
 	if(result){
 		console.log(`You're right!\n`)
 		points++;
